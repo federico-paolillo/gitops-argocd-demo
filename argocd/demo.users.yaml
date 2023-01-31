@@ -1,0 +1,4 @@
+# You need to patch it with argocd-cm config map in your ArgoCD namespace
+data:
+  accounts.demoboy: login
+  accounts.demoboy.enabled: "true"

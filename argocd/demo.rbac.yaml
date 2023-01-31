@@ -1,0 +1,8 @@
+# You need to patch it with argocd-rbac-cm config map in your ArgoCD namespace
+data:
+  policy.default: role:readonly
+  policy.csv: |
+    p, demoboy, *, get, demo/demo, allow
+    p, demoboy, *, update, demo/demo, allow
+    p, demoboy, *, sync, demo/demo, allow
+    p, demoboy, logs, get, *, allow
