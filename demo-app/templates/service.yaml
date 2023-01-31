@@ -4,10 +4,9 @@ metadata:
   name: demo-app-svc
   namespace: demo-app
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-    - nodePort: {{ .Values.nodePort }} 
-      targetPort: http-port
+    - targetPort: http-port
       port: 65535
   selector:
     app: demo-app
