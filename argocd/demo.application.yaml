@@ -6,9 +6,12 @@ metadata:
 spec:
   project: demo
   source:
-    repoURL: https://github.com/federico-paolillo/gitops-argocd-demo.git
-    path: manifests/ # folder with manifests file
+    repoUrl: https://github.com/federico-paolillo/gitops-argocd-demo.git
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - ../values.yaml
+    chart: demo-app  
   destination:
     namespace: demo-app
     name: in-cluster

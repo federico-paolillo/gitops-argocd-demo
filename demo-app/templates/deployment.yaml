@@ -4,7 +4,7 @@ metadata:
   name: demo-app-deployment
   namespace: demo-app
 spec:
-  replicas: 3
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       app: demo-app
@@ -14,9 +14,18 @@ spec:
       labels:
         app: demo-app
     spec:
+      volumes:
+        - name: home-page
+          configMap:
+            name: demo-app-cm
+            items:
+              index.html: homePage
       containers:
         - name: demo-app-nginx
           image: nginx:stable
           ports:
             - containerPort: 80
               name: http-port 
+          volumes:
+            - name: home-page
+              mountPath: /var/www/nginx-default

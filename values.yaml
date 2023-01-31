@@ -1,0 +1,8 @@
+
+replicas: 5
+homePage: |
+  <html>
+    <body>
+      <h1>Demo App configured !</h1>
+    </body>
+  </html>
