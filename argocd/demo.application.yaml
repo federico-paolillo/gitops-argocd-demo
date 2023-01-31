@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo # it is unique by definition
+  namespace: argocd # must match argocd namespace in use
+spec:
+  project: demo
+  source:
+    repoURL: https://github.com/federico-paolillo/gitops-argocd-demo.git
+    path: manifests/ # folder with manifests file
+    targetRevision: HEAD
