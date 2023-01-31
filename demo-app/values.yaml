@@ -1,7 +1,1 @@
 replicas: 3
-homePage: |
-  <html>
-    <body>
-      <h1>Demo App !</h1>
-    </body>
-  </html>
