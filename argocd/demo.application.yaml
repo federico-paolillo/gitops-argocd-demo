@@ -9,3 +9,13 @@ spec:
     repoURL: https://github.com/federico-paolillo/gitops-argocd-demo.git
     path: manifests/ # folder with manifests file
     targetRevision: HEAD
+  destination:
+    namespace: demo-app
+    name: in-cluster
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    retry:
+      limit: 3

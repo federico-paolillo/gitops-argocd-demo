@@ -15,4 +15,7 @@ spec:
       kind: Deployment
     - group: ''
       kind: Service
+  clusterResourceWhitelist:
+    - group: ''
+      kind: Namespace
   
