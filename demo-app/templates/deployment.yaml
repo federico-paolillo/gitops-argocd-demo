@@ -19,7 +19,8 @@ spec:
           configMap:
             name: demo-app-cm
             items:
-              index.html: homePage
+              - path: index.html 
+                key: homePage
       containers:
         - name: demo-app-nginx
           image: nginx:stable

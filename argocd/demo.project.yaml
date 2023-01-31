@@ -16,6 +16,8 @@ spec:
       kind: Deployment
     - group: ''
       kind: Service
+    - group: ''
+      kind: ConfigMap
   clusterResourceWhitelist:
     - group: ''
       kind: Namespace

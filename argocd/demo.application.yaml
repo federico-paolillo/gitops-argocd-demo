@@ -6,12 +6,12 @@ metadata:
 spec:
   project: demo
   source:
-    repoUrl: https://github.com/federico-paolillo/gitops-argocd-demo.git
     targetRevision: HEAD
+    repoURL: https://github.com/federico-paolillo/gitops-argocd-demo
+    path: demo-app
     helm:
       valueFiles:
         - ../values.yaml
-    chart: demo-app  
   destination:
     namespace: demo-app
     name: in-cluster
