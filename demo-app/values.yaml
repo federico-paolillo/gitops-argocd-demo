@@ -1,1 +1,10 @@
 replicas: 3
+homePage: |
+    <html>
+        <head>
+            <title>Default title</title>
+        </head>
+        <body>
+            <h1>Default app</h1>
+        </body>
+    </html>
