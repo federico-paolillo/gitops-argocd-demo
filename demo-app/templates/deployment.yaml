@@ -14,9 +14,19 @@ spec:
       labels:
         app: demo-app
     spec:
+      volumes:
+        - name: home-page
+          configMap:
+            name: demo-app-cm
+            items:
+              - key: homePage
+                path: index.html
       containers:
         - name: demo-app-nginx
           image: nginx:stable
           ports:
             - containerPort: 80
               name: http-port 
+          volumeMounts:
+            - name: home-page
+              mountPath: /usr/share/nginx/html
