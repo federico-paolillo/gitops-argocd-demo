@@ -1,10 +1,10 @@
-replicas: 2
+replicas: 3
 homePage: |
-  <html>
-      <head>
-          <title>Demo app title from values.yaml</title>
-      </head>
-      <body>
-          <h1>Demo app from values.yaml !</h1>
-      </body>
-  </html>
+    <html>
+        <head>
+            <title>Demo app title from values.yaml</title>
+        </head>
+        <body>
+            <h1>Demo app from values.yaml !</h1>
+        </body>
+    </html>
